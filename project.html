@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.heading{
+    text-align: center;
+}
+.main > table ,tr,th {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.calculation {
+    width: 100%;
+    margin-left: 40%;
+    margin-right:30%;
+  
+}
+.calculation >input ,button{
+    margin-left: 10px;
+}
+
+</style>
+<body>
+<div class="heading">
+    <h1>JavaScript Expese Calculator Application</h1>
+</div>
+
+<div class="main">
+    <table>
+        <tr>
+        <th>Income</th>
+        <th>Expense</th>
+        <th>Profit Loss</th>
+    </tr>
+    <tr>
+        <th id="income">0</th>
+        <th id="expense">0</th>
+        <th id="total">0</th>
+    </tr>
+    </table>
+</div>
+<div class="calculation">
+<!-- <form action=""> -->
+<input type="number" name="" id="inp1"><button id="btn1" onclick="inc()">Income</button><button id="btn2"
+    onclick="exp()">Expense</button>
+<!-- </form> -->
+
+</div>
+
+
+    <script>
+
+    var input = document.getElementById("inp1");
+        var income = document.getElementById("income");
+        var expense = document.getElementById("expense");
+        var totalshow = document.getElementById("total");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var totalexpense = 0
+        var totalincome = 0;
+        var total = 0;
+function inc()
+{
+     var a = parseFloat(input.value);
+     totalincome += a;
+income.innerText = totalincome ;
+
+    total = totalincome - totalexpense;
+    totalshow.innerText = total;
+
+}
+
+function exp() {
+    
+    var a = parseFloat(input.value);
+     totalexpense +=  a;
+    expense.innerText = totalexpense;
+
+
+    total = totalincome - totalexpense;
+    totalshow.innerText = total;
+
+    }
+
+
+    
+    
+        
+
+    </script>
+</body>
+</html>
